@@ -1,0 +1,92 @@
+﻿<Application x:Class="Polozi_Criativo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Polozi_Criativo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="borderStyle" TargetType="{x:Type Border}">
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#ff8303" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Width" Value="600" />
+            <Setter Property="CornerRadius" Value="7"/>
+            <Setter Property="Background" Value="#ebefec" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="txtBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#2e2e2e" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Height" Value="50" />
+        </Style>
+
+        <Style x:Key="buttons" TargetType="Button">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Foreground" Value="#ebefec" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="30">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#ff8303"/>
+                    <Setter Property="Foreground" Value="#ebefec" />
+                </Trigger>
+                <Trigger Property="IsMouseDirectlyOver" Value="True">
+                    <Setter Property="Background" Value="#ff8303"/>
+                    <Setter Property="Foreground" Value="#ebefec" />
+                </Trigger>
+            </Style.Triggers>
+
+
+        </Style>
+
+        <Style x:Key="borderButton" TargetType="Border">
+            <!--Width="200" Height="75" Background="White" CornerRadius="30"-->
+            <Setter Property="Width" Value="200" />
+            <Setter Property="Height" Value="75" />
+            <Setter Property="CornerRadius" Value="30" />
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="0" />
+
+
+
+
+        </Style>
+
+        <Style x:Key="explorerButton" TargetType="Button" BasedOn="{StaticResource buttons}">
+
+            <Setter Property="Foreground" Value="#2e2e2e"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+        </Style>
+
+    </Application.Resources>
+</Application>
